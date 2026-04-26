@@ -19,13 +19,17 @@ GitSnake 是一个自动化工具，可基于 GitHub 贡献图生成贪吃蛇动
 
 在复刻后的仓库中，创建名为 `output` 的空分支（无需提交任何文件），用于承载 GitHub Pages 部署的动画文件。
 
-### 3. GitHub Pages 配置
+### 3. 启动 GitHub Actions
+
+默认情况下，Fork 的仓库会禁用 GitHub Actions，需要进入仓库「Actions」页面手动开启。
+
+### 4. GitHub Pages 配置
 
 1. 进入仓库 `Settings` 页面，找到 `Pages` 选项；
 2. 在 `Build and deployment` 区域，将 `Source` 设置为 `Deploy from a branch`；
 3. `Branch` 选择 `output` 分支，路径选择 `/(root)`，点击「Save」保存配置。
 
-### 4. 动画生成与访问
+### 5. 动画生成与访问
 
 - 自动触发：配置完成后，每日 UTC 时间 0 点会自动执行工作流生成并部署动画；
 - 手动触发：如需立即生成，可进入仓库「Actions」页面，选择「Generate snake animation」，点击「Run workflow」手动执行；
